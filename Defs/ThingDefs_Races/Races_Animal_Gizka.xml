@@ -9,7 +9,7 @@
       <MoveSpeed>1.0</MoveSpeed>
       <MarketValue>10</MarketValue>
       <LeatherAmount>0</LeatherAmount>
-      <ComfyTemperatureMin>-50</ComfyTemperatureMin>
+      <ComfyTemperatureMin>-10</ComfyTemperatureMin>
     </statBases>
     <tools>
       <li>
@@ -20,26 +20,38 @@
         <power>1</power>
         <cooldownTime>2.0</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
       </li>
     </tools>
     <race>
       <body>QuadrupedAnimalWithPaws</body>
-      <baseHungerRate>0.50</baseHungerRate>
-      <baseBodySize>0.22</baseBodySize>
+      <herdAnimal>true</herdAnimal>
+      <baseHungerRate>0.10</baseHungerRate>
+      <baseBodySize>0.25</baseBodySize>
       <baseHealthScale>0.20</baseHealthScale>
       <foodType>VegetarianRoughAnimal</foodType>
+      <useMeatFrom>Hare</useMeatFrom>
       <trainability>None</trainability>
       <wildness>0</wildness>
+      <petness>1</petness>
+      <nuzzleMtbHours>34</nuzzleMtbHours>
       <manhunterOnTameFailChance>0</manhunterOnTameFailChance>
       <manhunterOnDamageChance>0</manhunterOnDamageChance>
-      <mateMtbHours>2</mateMtbHours>
+      <mateMtbHours>1</mateMtbHours>
+      <gestationPeriodDays>0.5</gestationPeriodDays>
+      <litterSizeCurve>
+            <points>
+              <li>(0.5, 0)</li>
+              <li>(1, 2.25)</li>
+              <li>(2, 4.5)</li>
+              <li>(3, 3.25)</li>
+              <li>(6.5, 0)</li>
+            </points>
+      </litterSizeCurve>
       <lifeExpectancy>4</lifeExpectancy>
       <lifeStageAges>
         <li>
-          <def>AnimalBabyTiny</def>
-          <minAge>0</minAge>
+          <def>AnimalBaby</def>
+          <minAge>0.0</minAge>
 					<soundWounded>Pawn_Chick_Call</soundWounded>
 					<soundDeath>Pawn_Chick_Call</soundDeath>
 					<soundCall>Pawn_Chick_Call</soundCall>
@@ -47,7 +59,7 @@
         </li>
         <li>
           <def>AnimalAdult</def>
-          <minAge>0.1</minAge>
+          <minAge>0.2</minAge>
           <soundWounded>Pawn_Chicken_Wounded</soundWounded>
           <soundDeath>Pawn_Chicken_Death</soundDeath>
           <soundCall>Pawn_Chicken_Call</soundCall>
@@ -77,36 +89,20 @@
         <label>hatchling</label>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Gizka/Gizka</texPath>
-          <drawSize>0.45</drawSize>
-          <color>(223,219,108)</color>
+          <drawSize>0.5</drawSize>
+          <color>(255,255,255)</color>
         </bodyGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Gizka/Dessicated_Gizka</texPath>
-          <drawSize>0.45</drawSize>
-        </dessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/Gizka/Gizka</texPath>
-          <drawSize>0.87</drawSize>
-          <color>(200,150,85)</color>
+          <drawSize>1.0</drawSize>
+          <color>(255,255,255)</color>
           <shadowData>
             <volume>(0.3, 0.4, 0.3)</volume>
             <offset>(0,0,-0.05)</offset>
           </shadowData>
         </bodyGraphicData>
-        <femaleGraphicData>
-          <texPath>Things/Pawn/Animal/Gizka/Gizka</texPath>
-          <drawSize>0.85</drawSize>
-        </femaleGraphicData>
-        <dessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Gizka/Dessicated_Gizka</texPath>
-          <drawSize>0.87</drawSize>
-        </dessicatedBodyGraphicData>
-        <femaleDessicatedBodyGraphicData>
-          <texPath>Things/Pawn/Animal/Gizka/Dessicated_Gizka</texPath>
-          <drawSize>0.85</drawSize>
-        </femaleDessicatedBodyGraphicData>
       </li>
     </lifeStages>
     </PawnKindDef>
